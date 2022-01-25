@@ -1,4 +1,17 @@
-body {
-  background: red;
+.container {
+  margin-top: 10%;
+}
+
+.display .container .left {
+  margin-right: 2%;
+}
+
+.display .container .right {
+  color: blue;
+}
+
+img {
+  width: 30px;
+  margin-left: 2%;
 }
 /*# sourceMappingURL=style.css.map */
