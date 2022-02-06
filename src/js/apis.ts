@@ -6,7 +6,7 @@ export interface Country{
 export interface Movie{
     Runtime: string,
     Country: string,
-    Year: Number,
+    Year: number,
     Actors: string,
     
 }

@@ -19,7 +19,7 @@ export async function displayInfo() {
     releasedTd.innerText = `this year`;
   } else {
     releasedTd.innerText = `${
-      new Date().getFullYear() - Number(movies.Year)
+      new Date().getFullYear() - movies.Year
     } years ago`;
   }
   
