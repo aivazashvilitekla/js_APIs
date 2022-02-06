@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const config = {
-  entry: path.resolve(__dirname, "src", "index.js"),
+  entry: path.resolve(__dirname, "src", "index.ts"),
   mode: "development",
   output: {
     path: path.resolve(__dirname, "./dist"),
@@ -24,9 +24,9 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: ["ts-loader"],
       },
       {
         test: /\.css$/i,
@@ -34,5 +34,8 @@ const config = {
       },
     ],
   },
+  resolve: {
+    extensions: [".ts", ".js"]
+  }
 };
 export default config;
