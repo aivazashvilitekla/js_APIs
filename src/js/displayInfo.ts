@@ -9,7 +9,7 @@ const actorsTd: HTMLElement = document.getElementById("actors");
 const currencyParent: HTMLElement = document.getElementById("currencyParent");
 
 export async function displayInfo() {
-  const movieName: String = movieInput.value;
+  const movieName: string = movieInput.value;
 
     const movies: Movie = await getMovie(movieName);
   const country: Array<Country> = await getCountry(movies.Country);
