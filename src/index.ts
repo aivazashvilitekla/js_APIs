@@ -14,7 +14,7 @@ searchBtn.addEventListener("click", () => {
 });
 // მეორე დავალება
 searchBtn2.addEventListener("click", () => {
-  const moviesArray = [movie1.value, movie2.value, movie3.value];
+  const moviesArray: Array<string> = [movie1.value, movie2.value, movie3.value];
   displayInfo2(moviesArray);
 });
 

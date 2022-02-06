@@ -48,11 +48,11 @@ export async function displayInfo2(moviesArray) {
     ].flat()
   );
 
-  const populationNum: Number = await getPopulation(Array.from(uniqueCountries));
+  const populationNum: number = await getPopulation(Array.from(uniqueCountries));
   minutes.innerText = `Minutes - ${sumOfRuntime}`;
   population.innerText = `Population - ${populationNum}`;
 }
-async function getPopulation(arr): Promise<Number> {
+async function getPopulation(arr): Promise<number> {
   const getPopulations = await Promise.all(
     arr.map((country) => getCountry(country))
   ).then((data) => data.map((x) => x[0].population));
