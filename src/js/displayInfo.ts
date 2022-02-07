@@ -11,8 +11,9 @@ const currencyParent: HTMLElement = document.getElementById("currencyParent");
 export async function displayInfo() {
   const movieName: string = movieInput.value;
 
-    const movies: Movie = await getMovie(movieName);
+  const movies: Movie = await getMovie(movieName);
   const country: Array<Country> = await getCountry(movies.Country);
+  console.log(country);
     
   const date: Date = new Date();
   if (movies.Year == date.getFullYear()) {
